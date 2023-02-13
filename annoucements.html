@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>VIZION CENTER</title>
+</head>
+
+<body>
+    <div class="cursor">
+    </div>
+    <h2 class="title">VIZION CENTER</h2>
+    <p class="subtitle">Welcome to vizion center!</p>
+    <div class="navbar">
+        <button class="navbtn" onclick="window.location.href='downloads.html';">DOWNLOADS</button>
+        <button class="navbtn" onclick="window.location.href='tools.html';">TOOLS</button>
+        <button class="navbtn" onclick="window.location.href='annoucements.html';">ANNOUCEMENTS</button>
+        <button class="navbtn" onclick="window.location.href='index.html';">HOME</button>
+    </div>
+    <hr>
+    <div class="center">
+        <div class="card">
+            <h3 class="title2">ANNOUCEMENTS !</h3>
+            <hr class="separator">
+            <div class="news">
+                <div class="card-announcement">
+                    <h3 class="title2">OPENING !</h3>
+                    <p class="title2">Hello everyone ! As you can see, we've recently opened our website and we've deployed our desktop launcher !</p>
+                    <p class="title2">We hope that you will enjoy our services ! Don't forget to join our discord (avaible on our website !).</p>
+                    <br>
+                    <p class="title2">Dédicace à toi S.C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+    });
+
+    document.addEventListener('click', e => {
+        cursor.classList.add("expand");
+        setTimeout(() => {
+            cursor.classList.remove("expand");
+        }, 500);
+    });
+</script>
